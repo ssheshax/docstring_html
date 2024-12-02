@@ -1,0 +1,803 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>libs.core.pipeline package &mdash; test_automation 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="libs.core.system package" href="libs.core.system.html" />
+    <link rel="prev" title="libs.core package" href="libs.core.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            test_automation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">applications.automation.advanced-system-tools-analytics</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="libs.html">libs package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="libs.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="libs.component.html">libs.component package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libs.context.html">libs.context package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="libs.core.html">libs.core package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libs.logger.html">libs.logger package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html#module-libs.singleton">libs.singleton module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="libs.html#module-libs">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">test_automation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">applications.automation.advanced-system-tools-analytics</a></li>
+          <li class="breadcrumb-item"><a href="libs.html">libs package</a></li>
+          <li class="breadcrumb-item"><a href="libs.core.html">libs.core package</a></li>
+      <li class="breadcrumb-item active">libs.core.pipeline package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/libs.core.pipeline.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="libs-core-pipeline-package">
+<h1>libs.core.pipeline package<a class="headerlink" href="#libs-core-pipeline-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-libs.core.pipeline.basic">
+<span id="libs-core-pipeline-basic-module"></span><h2>libs.core.pipeline.basic module<a class="headerlink" href="#module-libs.core.pipeline.basic" title="Link to this heading"></a></h2>
+<p>BASIC UTILITY FUNCTIONS</p>
+<blockquote>
+<div><p>These are functions that help transform data.</p>
+<dl>
+<dt>pipe_filter</dt><dd><p>This function is a shortcut for filter, which filters elements from an iterable based on a condition.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inputages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">validateadulthood</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>   <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+<span class="gp">... </span>       <span class="k">return</span> <span class="kc">False</span>
+<span class="gp">... </span>   <span class="k">else</span><span class="p">:</span>
+<span class="gp">... </span>       <span class="k">return</span> <span class="kc">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pip_filter</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_filter</span><span class="p">(</span><span class="n">validateadulthood</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">pip_filter</span><span class="p">(</span><span class="n">inputages</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+<span class="go">[49, 22, 18, 24, 32]</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_map</dt><dd><p>This function wraps the built-in map() function. It allows you to apply a transformation function to a list</p>
+</dd>
+</dl>
+<p>(or iterable).</p>
+<dl>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipemap_func_multiplybytwo</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pipemap_func_multiplybytwo</span><span class="p">(</span><span class="n">list2</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span>
+<span class="go">[6, 12, 18]</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_mapstar</dt><dd><p>This is a more advanced version of pipe_map that can handle functions expecting multiple
+arguments (like f(<a href="#id1"><span class="problematic" id="id2">*</span></a>args)).</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list1</span> <span class="o">=</span> <span class="p">[(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pipemapstar_func_multiply</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_mapstar</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pipemapstar_func_multiply</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">[12, 30, 56]</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_reduce</dt><dd><p>This function wraps reduce() (from functools), which reduces an iterable to a single value
+using a binary function.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pipereduce_func_sum</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">pipereduce_func_sum</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">22</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_flatten</dt><dd><p>This function flattens a list of lists (or any iterable of iterables) into a single list.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list1</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pipemap_flatten_func</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_flatten</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pipemap_flatten_func</span><span class="p">(</span><span class="n">list1</span><span class="p">))</span>  <span class="c1"># Convert to list to evaluate the iterator</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span>
+<span class="go">[1, 2, 3, 4, 5, 6]</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_slice</dt><dd><p>This function slices an iterable, either extracting a single item or a range of items.</p>
+</dd>
+<dt>Example 1: Get the first item from the list:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pipeslice_func_first</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_slice</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">pipeslice_func_first</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">10</span>
+</pre></div>
+</div>
+</dd>
+<dt>Example 2: Slice a range from the list:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipeslice_func_range</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">pipeslice_func_range</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">[20, 30]</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_not_filter</dt><dd><p>This is a combination of pipe_filter and a negation function (pipe_not). It filters out elements that do not
+meet the condition.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">inputages</span> <span class="o">=</span> <span class="p">[</span><span class="mi">49</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">32</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">validate_adulthood</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">18</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pipenotfilter_func</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_not_filter</span><span class="p">(</span><span class="n">validate_adulthood</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">pipenotfilter_func</span><span class="p">(</span><span class="n">inputages</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">[5, 12, 17, 9]</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.basic.pipe_filter">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.basic.</span></span><span class="sig-name descname"><span class="pre">pipe_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.basic.pipe_filter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.basic.pipe_flatten">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.basic.</span></span><span class="sig-name descname"><span class="pre">pipe_flatten</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.basic.pipe_flatten" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.basic.pipe_map">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.basic.</span></span><span class="sig-name descname"><span class="pre">pipe_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.basic.pipe_map" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.basic.pipe_mapstar">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.basic.</span></span><span class="sig-name descname"><span class="pre">pipe_mapstar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.basic.pipe_mapstar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.basic.pipe_not_filter">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.basic.</span></span><span class="sig-name descname"><span class="pre">pipe_not_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.basic.pipe_not_filter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.basic.pipe_reduce">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.basic.</span></span><span class="sig-name descname"><span class="pre">pipe_reduce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.basic.pipe_reduce" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.basic.pipe_slice">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.basic.</span></span><span class="sig-name descname"><span class="pre">pipe_slice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'idx'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.basic.pipe_slice" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-libs.core.pipeline.cluster">
+<span id="libs-core-pipeline-cluster-module"></span><h2>libs.core.pipeline.cluster module<a class="headerlink" href="#module-libs.core.pipeline.cluster" title="Link to this heading"></a></h2>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_list_append</span><span class="p">(</span><span class="mi">10</span><span class="p">)([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="go">[1, 2, 3, 10]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">make_ints</span><span class="p">([</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">]))</span>
+<span class="go">[1, 2, 3]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_first_n_items</span><span class="p">(</span><span class="mi">3</span><span class="p">)([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">[1, 2, 3]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_last_n_items</span><span class="p">(</span><span class="mi">2</span><span class="p">)([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">[4, 5]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_replace</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;hi&quot;</span><span class="p">)(</span><span class="s2">&quot;hello world&quot;</span><span class="p">)</span>
+<span class="go">&#39;hi world&#39;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_in</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">)([</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">])</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_pop_n_item</span><span class="p">(</span><span class="mi">2</span><span class="p">)([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="go">(3, [1, 2, 4, 5])</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_map_strings</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">)([</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">])</span>
+<span class="go">[False, False, True]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_filter_strings_contained_by</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)([</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz&quot;</span><span class="p">])</span>
+<span class="go">[&#39;foobar&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pipe_filter_strings_not_contained_by</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)([</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz&quot;</span><span class="p">])</span>
+<span class="go">[&#39;bar&#39;, &#39;baz&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_strings_that_contain</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)([</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span> <span class="s2">&quot;foobar&quot;</span><span class="p">,</span> <span class="s2">&quot;baz&quot;</span><span class="p">]))</span>
+<span class="go">[&#39;foobar&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_strings_endswith</span><span class="p">(</span><span class="s2">&quot;ing&quot;</span><span class="p">)([</span><span class="s2">&quot;singing&quot;</span><span class="p">,</span> <span class="s2">&quot;jumping&quot;</span><span class="p">,</span> <span class="s2">&quot;dancing&quot;</span><span class="p">]))</span>
+<span class="go">[&#39;singing&#39;, &#39;jumping&#39;, &#39;dancing&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_map_strings_startswith</span><span class="p">(</span><span class="s2">&quot;ho&quot;</span><span class="p">)([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;hoop&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]))</span>
+<span class="go">[False, True, False]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_strings_startswith</span><span class="p">(</span><span class="s2">&quot;ho&quot;</span><span class="p">)([</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;hoop&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">]))</span>
+<span class="go">[&#39;hoop&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_map_stringlist</span><span class="p">([</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">])([</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">]))</span>
+<span class="go">[True, False, True]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_stringlist</span><span class="p">([</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">])([</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">]))</span>
+<span class="go">[&#39;banana&#39;, &#39;apple&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_stringlist_startswith</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">])([</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">]))</span>
+<span class="go">[&#39;banana&#39;, &#39;apple&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_stringlist_endswith</span><span class="p">([</span><span class="s2">&quot;ing&quot;</span><span class="p">,</span> <span class="s2">&quot;ing&quot;</span><span class="p">])([</span><span class="s2">&quot;singing&quot;</span><span class="p">,</span> <span class="s2">&quot;jumping&quot;</span><span class="p">,</span> <span class="s2">&quot;dancing&quot;</span><span class="p">]))</span>
+<span class="go">[&#39;singing&#39;, &#39;jumping&#39;, &#39;dancing&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_stringlist_not_startswith</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">])([</span><span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">,</span> <span class="s2">&quot;apple&quot;</span><span class="p">]))</span>
+<span class="go">[&#39;cherry&#39;]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">pipe_filter_stringlist_not_endswith</span><span class="p">([</span><span class="s2">&quot;ing&quot;</span><span class="p">])([</span><span class="s2">&quot;singing&quot;</span><span class="p">,</span> <span class="s2">&quot;jumping&quot;</span><span class="p">,</span> <span class="s2">&quot;dancing&quot;</span><span class="p">]))</span>
+<span class="go">[]</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">dict_to_set_with_pipeline</span><span class="p">([{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}])</span>
+<span class="go">{((&#39;a&#39;, 3), ((&#39;b&#39;, 4),)), ((&#39;a&#39;, 1), ((&#39;b&#39;, 2),))}</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">convert_value_to_tuple</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+<span class="go">(1, 2, 3)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">convert_value_to_tuple</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="go">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">convert_value_to_tuple</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]))</span>
+<span class="go">(1, (2, 3))</span>
+</pre></div>
+</div>
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.convert_value_to_tuple">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">convert_value_to_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.convert_value_to_tuple" title="Link to this definition"></a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">convert_value_to_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">None</span></span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">convert_value_to_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">convert_value_to_tuple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span></span></em><span class="sig-paren">)</span></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.dict_to_set_with_pipeline">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">dict_to_set_with_pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_dicts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.dict_to_set_with_pipeline" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_key_value">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_key_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_key_value" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_not_stringlist">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_not_stringlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_not_stringlist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_not_strings">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_not_strings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_not_strings" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_stringlist">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_stringlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_stringlist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_stringlist_endswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_stringlist_endswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_stringlist_endswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_stringlist_not_endswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_stringlist_not_endswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_stringlist_not_endswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_stringlist_not_startswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_stringlist_not_startswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_stringlist_not_startswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_stringlist_startswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_stringlist_startswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_stringlist_startswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_strings">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_strings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_strings" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_strings_contained_by">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_strings_contained_by</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_strings_contained_by" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_strings_endswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_strings_endswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_strings_endswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_strings_not_contained_by">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_strings_not_contained_by</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_strings_not_contained_by" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_strings_startswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_strings_startswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_strings_startswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_strings_that_contain">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_strings_that_contain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_strings_that_contain" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_filter_sub_strings">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_filter_sub_strings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_filter_sub_strings" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_first_n_items">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_first_n_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_first_n_items" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_in">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_in</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">thing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_in" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_last_n_items">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_last_n_items</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_last_n_items" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_list_append">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_list_append</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_list_append" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_map_string_split">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_map_string_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_map_string_split" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_map_stringlist">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_map_stringlist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_map_stringlist" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_map_strings">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_map_strings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_map_strings" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_map_strings_endswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_map_strings_endswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_map_strings_endswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_map_strings_startswith">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_map_strings_startswith</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">str_to_match</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_map_strings_startswith" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_pop_n_item">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_pop_n_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_pop_n_item" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_replace">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_replace" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.cluster.pipe_string_split">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.cluster.</span></span><span class="sig-name descname"><span class="pre">pipe_string_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.cluster.pipe_string_split" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-libs.core.pipeline.primitive">
+<span id="libs-core-pipeline-primitive-module"></span><h2>libs.core.pipeline.primitive module<a class="headerlink" href="#module-libs.core.pipeline.primitive" title="Link to this heading"></a></h2>
+<p>CORE/PRIMITIVE UTILITY FUNCTIONS</p>
+<blockquote>
+<div><p>These are functions that make using pipelines easier and simpler.</p>
+<dl>
+<dt>partial2</dt><dd><p>Takes a function and an argument that will return a new function. The
+data in the pipeline will be the FIRST argument and the argument given
+initially will be the SECOND argument to the function given earlier.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">multiply_by_5</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">partial2</span><span class="p">(</span><span class="n">multiply</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">multiply_by_5</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">50</span>
+</pre></div>
+</div>
+</dd>
+<dt>partial2star</dt><dd><p>Takes a function and variable number of arguments that will return a new
+function. The data in the pipeline will be the FIRST argument and the
+arguments given initially will be the rest of arguments to the function
+given earlier.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">aggregatefunc</span><span class="p">(</span><span class="n">arg1</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">result</span> <span class="o">+=</span> <span class="n">arg</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">arg1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">concatstring</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">partial2star</span><span class="p">(</span><span class="n">aggregatefunc</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span> <span class="o">=</span> <span class="n">concatstring</span><span class="p">(</span><span class="s2">&quot;The result is&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="go">The result is 14</span>
+</pre></div>
+</div>
+</dd>
+<dt>partial2kwstar</dt><dd><p>Example of using <cite>partial2kwstar</cite> to pass keyword arguments to a function.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">greeting</span><span class="o">=</span><span class="s2">&quot;Hello&quot;</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">greeting</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">greetings</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">partial2kwstar</span><span class="p">(</span><span class="n">greet</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;greeting&quot;</span><span class="p">:</span> <span class="s2">&quot;Hi&quot;</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">greetings</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">Hi, John!</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_apply</dt><dd><p>Takes variable number of arguments that will return a new function which
+will pass on the initially given arguments to the function in the pipeline.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check_even</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">result</span> <span class="o">=</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">result</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">iseven</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_apply</span><span class="p">(</span><span class="n">check_even</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span> <span class="o">=</span> <span class="n">iseven</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_applystar</dt><dd><blockquote>
+<div><p>Takes variable number of arguments that will return a new function which</p>
+</div></blockquote>
+<p>will pass on the initially given arguments to the function in the pipeline.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">aggrfuncion</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">result</span> <span class="o">+=</span> <span class="n">arg</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">result</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">addintegers</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_applystar</span><span class="p">(</span><span class="n">aggrfuncion</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span> <span class="o">=</span> <span class="n">addintegers</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="go">15</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_applykws</dt><dd><p>Example of passing keyword arguments using pipe_applykws.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">register_user</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">,</span> <span class="n">email</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Registered user: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, Age: </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">, Email: </span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">user_details</span> <span class="o">=</span> <span class="p">{</span>
+<span class="gp">... </span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
+<span class="gp">... </span>    <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;alice@example.com&quot;</span>
+<span class="gp">... </span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">register_with_details</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_applykws</span><span class="p">(</span><span class="n">register_user</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">register_with_details</span><span class="p">(</span><span class="n">user_details</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">Registered user: Alice, Age: 30, Email: alice@example.com</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_call</dt><dd><p>Calls the given callable function.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">addition_two_numbers</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_call</span><span class="p">(</span><span class="n">addition_two_numbers</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">7</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_callarg</dt><dd><p>Calls a function with arguments passed via pipe_callarg.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">check_even</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="s2">&quot;even&quot;</span> <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;odd&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">num</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_callarg</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">num</span><span class="p">(</span><span class="n">check_even</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">even</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_callstar</dt><dd><p>Calls a function with unpacked arguments using pipe_callstar.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">multiply</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">multiply_func</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_callstar</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">multiply_func</span><span class="p">(</span><span class="n">multiply</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">12</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_callkws</dt><dd><p>Calls a function with keyword arguments using pipe_callkws.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">display_info</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">age</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Name: </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">, Age: </span><span class="si">{</span><span class="n">age</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">info</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span> <span class="s1">&#39;Alice&#39;</span><span class="p">,</span> <span class="s1">&#39;age&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">display_func</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_callkws</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">display_func</span><span class="p">(</span><span class="n">display_info</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">Name: Alice, Age: 30</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_attr</dt><dd><p>Extracts an attribute from a namedtuple using pipe_attr.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">attributes_of_a_student</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s2">&quot;StudentDetails&quot;</span><span class="p">,</span> <span class="s2">&quot;name, age, gender&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">feed_student_information</span> <span class="o">=</span> <span class="n">attributes_of_a_student</span><span class="p">(</span><span class="s2">&quot;GVK&quot;</span><span class="p">,</span> <span class="s2">&quot;34&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_student_info</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_attr</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name</span> <span class="o">=</span> <span class="n">get_student_info</span><span class="p">(</span><span class="n">feed_student_information</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="go">GVK</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_student_info</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_attr</span><span class="p">(</span><span class="s2">&quot;age&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">age</span> <span class="o">=</span> <span class="n">get_student_info</span><span class="p">(</span><span class="n">feed_student_information</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<span class="go">34</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_item</dt><dd><p>Extracts an item from a list using pipe_item.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">get_item</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_item</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">get_item</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">20</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_not</dt><dd><p>Negates the result of a function using pipe_not.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">is_even</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">not_even</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_not</span><span class="p">(</span><span class="n">is_even</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">not_even</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_eq</dt><dd><p>Checks if the value matches the expected value using pipe_eq.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">check_five</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_eq</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">check_five</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">check_five</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_isnone</dt><dd><p>Checks if the value is None using pipe_isnone.</p>
+</dd>
+<dt>Example:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_isnone</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">result</span> <span class="o">=</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_isnone</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd>
+<dt>pipe_item</dt><dd><p>Fetch items at a given index</p>
+</dd>
+</dl>
+<p>Example:
+&gt;&gt;&gt; data = [10, 20, 30]
+&gt;&gt;&gt; get_item = pipeline.pipe_item(1)  # Create a function to get the item at index 1
+&gt;&gt;&gt; result = get_item(data)
+&gt;&gt;&gt; print(result)
+20</p>
+</div></blockquote>
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.partial2">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">partial2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.partial2" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.partial2kwstar">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">partial2kwstar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kws</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.partial2kwstar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.partial2star">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">partial2star</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.partial2star" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_apply">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_apply" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_applykws">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_applykws</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_applykws" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_applystar">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_applystar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_applystar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_call">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_call" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_callarg">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_callarg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">arg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_callarg" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_callkws">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_callkws</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kws</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_callkws" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_callstar">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_callstar</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_callstar" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_eq">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_eq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_eq" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libs.core.pipeline.primitive.pipe_not">
+<span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.primitive.</span></span><span class="sig-name descname"><span class="pre">pipe_not</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.primitive.pipe_not" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-libs.core.pipeline">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-libs.core.pipeline" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="libs.core.pipeline.Pipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">libs.core.pipeline.</span></span><span class="sig-name descname"><span class="pre">Pipeline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libs.core.pipeline.Pipeline" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class that implements a functional pipeline allowing chaining of functions in a readable way.
+This pipeline allows you to define a sequence of transformations (functions) and apply them to an initial value.
+Functions can be added to the pipeline using the <cite>&gt;&gt;</cite> operator, and the pipeline can be executed with a call to the
+instance itself.</p>
+<p class="rubric">Example</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">res</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">()</span> <span class="o">&gt;&gt;</span> <span class="n">pipeline</span><span class="o">.</span><span class="n">pipe_map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&gt;&gt;</span> <span class="nb">list</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">output</span> <span class="o">=</span> <span class="n">res</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+<span class="go">[2, 4, 6, 8]</span>
+</pre></div>
+</div>
+<p>The pipeline supports optional decorators and provides the ability to exit early based on specific conditions.</p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="libs.core.html" class="btn btn-neutral float-left" title="libs.core package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="libs.core.system.html" class="btn btn-neutral float-right" title="libs.core.system package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, sandeep.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
